@@ -35,7 +35,7 @@ Extenions can be:
     * Tasks
     * Events
 
-(See [Guidelines](GUILDELINES.md) for Fickle Zed's thoughts/recommendations on authoring an extension.)
+(See [Guidelines](GUIDELINES.md) for Fickle Zed's thoughts/recommendations on authoring an extension.)
 
 ### UI / UX
 
