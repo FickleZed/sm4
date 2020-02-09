@@ -1,0 +1,2 @@
+<input #manifestFileInput type="file" name="manifests" accept="application/json" multiple (change)="onChange($event.target.files)">
+<button mat-raised-button [disabled]="disabled" (click)="manifestFileInput.click()" (blur)="onTouched()">Select Manifests...</button>

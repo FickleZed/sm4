@@ -1,0 +1,14 @@
+<div mat-dialog-title>Save to slot {{ abstract.slot }}</div>
+<form>
+  <div mat-dialog-content>
+    <div>
+      <input type="text" name="label" [(ngModel)]="label">
+    </div>
+    <div *ngIf="abstract?.date" class="text-danger">
+      This will override save {{ abstract.label }} from {{ abstract.date | date }}!
+    </div>
+  </div>
+  <div mat-dialog-actions style="display: flex; justify-content: center;">
+    <button type="submit" (click)="save(abstract.slot, label)">Save</button>
+  </div>
+</form>

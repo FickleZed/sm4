@@ -1,0 +1,5 @@
+<div>
+  <h1 *ngIf="avatarName$ | async as avatarName" class="mat-headline">{{ avatarName }}</h1>
+  <img *ngIf="standardImageUrl$ | async as standardImageUrl" [src]="standardImageUrl" style="height: 300px" class="img-fluid">
+  <img *ngIf="alternateImageUrl$ | async as alternateImageUrl" [src]="alternateImageUrl" style="height: 300px" class="img-fluid">
+</div>

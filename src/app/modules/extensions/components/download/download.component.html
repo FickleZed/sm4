@@ -1,0 +1,6 @@
+<form>
+  <mat-form-field>
+    <input name="url" matInput type="url" placeholder="Extension URL" [(ngModel)]="extensionUrl" />
+  </mat-form-field>
+  <button mat-raised-button (click)="download(extensionUrl)">Download</button>
+</form>

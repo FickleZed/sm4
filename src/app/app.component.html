@@ -1,0 +1,29 @@
+<mat-sidenav-container *ngLet="route$ | async as route">
+  <mat-sidenav #sidenav [mode]="route === 'game' ? 'over' : 'side'" [opened]="route !== 'game'">
+    <mat-action-list>
+        <button mat-list-item class="mat-button" [ngClass]="getRouteClass('new') | async" (click)="goto('new')">New Game</button>
+        <ng-container *ngIf="gameState$ | async">
+          <button mat-list-item class="mat-button" [ngClass]="getRouteClass('game') | async" (click)="goto('game')">Continue</button>
+          <button mat-list-item class="mat-button" [ngClass]="getRouteClass('save') | async"
+            matTooltip="CTRL+S; F5 to Quicksave" (click)="goto('save')">
+            Save
+          </button>
+        </ng-container>
+        <button mat-list-item class="mat-button" [ngClass]="getRouteClass('load') | async"
+          matTooltip="CTRL+L; F9 to Quickload" (click)="goto('load')">
+          Load
+        </button>
+        <button mat-list-item class="mat-button" [ngClass]="getRouteClass('extensions') | async" (click)="goto('extensions')">Extensions</button>
+    </mat-action-list>
+  </mat-sidenav>
+  <mat-sidenav-content fxFlexFill>
+    <ng-container [ngSwitch]="route">
+      <sm4-home *ngSwitchCase="'home'"></sm4-home>
+      <sm4-extensions *ngSwitchCase="'extensions'"></sm4-extensions>
+      <sm4-game *ngSwitchCase="'game'" (openSidenav)="sidenav.open()"></sm4-game>
+      <sm4-new-game *ngSwitchCase="'new'"></sm4-new-game>
+      <sm4-save *ngSwitchCase="'save'"></sm4-save>
+      <sm4-load *ngSwitchCase="'load'"></sm4-load>
+    </ng-container>
+  </mat-sidenav-content>
+</mat-sidenav-container>

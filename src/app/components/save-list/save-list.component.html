@@ -1,0 +1,8 @@
+<mat-action-list>
+  <button *ngFor="let save of saves$ | async" mat-list-item (click)="(!existingOnly || save.date) && select(save)">
+    <i matListIcon>{{ save.slot }}</i>
+    <h4 *ngIf="!save.slot" matLine>Quick Slot</h4>
+    <h4 matLine>{{ save.label }}</h4>
+    <p matLine>{{ save?.date | date:'yyyy-MM-dd HH:mm:ss' }}</p>
+  </button>
+</mat-action-list>

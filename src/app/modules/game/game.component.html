@@ -1,0 +1,17 @@
+<mat-toolbar color="primary">
+  <button mat-button class="hamburger" (click)="openSidenav()">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <div fxLayout="row wrap" fxLayoutGap="20px">
+    <div style="font-family: Papyrus;">Slave Maker 4</div>
+    <div>Slave: </div>
+    <div>Slave Maker: {{ avatarName$ | async }}</div>
+    <div>Day: {{ day$ | async }}</div>
+    <div>Gold: {{ currency$ | async }}</div>
+  </div>
+</mat-toolbar>
+<section class="game-container">
+  <ng-container [ngSwitch]="stage$ | async">
+    <sm4-morning *ngSwitchCase="'morning'"></sm4-morning>
+  </ng-container>
+</section>

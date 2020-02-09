@@ -1,0 +1,11 @@
+<div mat-dialog-title>Select an Avatar</div>
+<div mat-dialog-content *ngLet="avatars$ | async as avatars">
+  <div *ngIf="!avatars?.length">Go to Extensions to load Avatar sets</div>
+  <mat-action-list *ngIf="avatars?.length">
+    <button *ngFor="let avatar of avatars" mat-list-item (click)="select(avatar)">
+      <img matListAvatar [src]="avatar.profileImageUrl" />
+      <h4 matLine>{{avatar.abstract.description}}</h4>
+      <p matLine>other line text</p>
+    </button>
+  </mat-action-list>
+</div>

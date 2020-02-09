@@ -1,0 +1,24 @@
+mat-toolbar.mat-toolbar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  padding: 0 16px 0 0;
+  z-index: 10;
+}
+
+section.game-container {
+  display: block;
+  position:absolute;
+  height:auto;
+  bottom:0;
+  top:64px;
+  left:0;
+  right:0;
+  padding: 1rem;
+}
+
+.hamburger {
+  height: 100%;
+  margin: 0 8px 0 0;
+}

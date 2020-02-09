@@ -1,0 +1,117 @@
+{
+  "charm": {
+    "name": "Charm",
+    "description": "[HisHer] ability to entertain and impress in social situations.",
+    "hints": [{
+      "upperBound": 25,
+      "description": "awkward and shy"
+    }, {
+      "upperBound": 50,
+      "description": ""
+    }, {
+      "upperBound": 75,
+      "description": "captivating"
+    }, {
+      "description": ""
+    }]
+  },
+  "fitness": {
+    "name": "Fitness",
+    "description": "[HisHer] physical endurance and strength.",
+    "hints": [{
+      "upperBound": 25,
+      "description": "weak and tires quickly"
+    }, {
+      "upperBound": 50,
+      "description": "healthy"
+    }, {
+      "upperBound": 75,
+      "description": "athletic"
+    }, {
+      "description": "olympian"
+    }]
+  },
+  "grace": {
+    "name": "Grace",
+    "description": "[HisHer] control over [hisher] body and movements.",
+    "hints": [{
+      "upperBound": 25,
+      "description": "clumsy"
+    }, {
+      "upperBound": 50,
+      "description": "casual"
+    }, {
+      "upperBound": 75,
+      "description": "graceful"
+    }, {
+      "description": ""
+    }]
+  },
+  "lust": {
+    "name": "Lust",
+    "description": "[HisHer] current level of arousal.",
+    "hints": [{
+      "upperBound": 25,
+      "description": "uninterested"
+    }, {
+      "upperBound": 50,
+      "description": "aroused"
+    }, {
+      "upperBound": 75,
+      "description": "horny"
+    }, {
+      "description": "thinking of nothing but sex"
+    }]
+  },
+  "libido": {
+    "name": "Libido",
+    "description": "The rate at which [heshe] becomes aroused.",
+    "hints": [{
+      "upperBound": 25,
+      "description": ""
+    }, {
+      "upperBound": 50,
+      "description": ""
+    }, {
+      "upperBound": 75,
+      "description": ""
+    }, {
+      "description": ""
+    }]
+  },
+  "oral": {
+    "name": "Oral",
+    "description": "[HisHer] skill at sexually pleasing others with [hisher] mouth.",
+    "hints": [{
+      "upperBound": 25,
+      "description": "inexperienced."
+    }, {
+      "upperBound": 50,
+      "description": "experienced."
+    }, {
+      "upperBound": 75,
+      "description": "talented."
+    }, {
+      "description": "divine."
+    }]
+  },
+  "fucking": {
+    "name": "Fucking",
+    "description": "[HisHer] experience at vaginal and anal sex.",
+    "hints": [{
+      "upperBound": 1,
+      "description": "a virgin."
+    }, {
+      "upperBound": 25,
+      "description": "inexperienced."
+    }, {
+      "upperBound": 50,
+      "description": "experienced."
+    }, {
+      "upperBound": 75,
+      "description": "talented."
+    }, {
+      "description": "divine."
+    }]
+  }
+}

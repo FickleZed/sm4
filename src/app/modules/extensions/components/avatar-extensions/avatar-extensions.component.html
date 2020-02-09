@@ -1,0 +1,14 @@
+<button mat-raised-button color="primary" (click)="openImportDialog()">Import from Local</button>
+
+<mat-card *ngFor="let avatar of avatars$ | async">
+  <mat-card-header>
+    <img mat-card-avatar [src]="avatar.profileImageUrl" />
+    <mat-card-title>{{ avatar.abstract.description }}</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <p>Other text description</p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-button color="warn" (click)="remove(avatar.abstract.key)">Remove</button>
+  </mat-card-actions>
+</mat-card>

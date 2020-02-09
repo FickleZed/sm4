@@ -1,0 +1,20 @@
+<div mat-dialog-title>Import from Local</div>
+<form #importForm="ngForm">
+  <div mat-dialog-content>
+    <div>
+      <sm4-files name="manifestFiles" accept="application/json" [(ngModel)]="manifestFiles" required>
+        Select Manifests...
+      </sm4-files>
+    </div>
+    <div>
+      <sm4-files name="imageFiles" accept="image/*" [(ngModel)]="imageFiles">
+        Select Images...
+      </sm4-files>
+    </div>
+  </div>
+  <div mat-dialog-actions style="display: flex; justify-content: center;">
+    <button type="submit" mat-raised-button color="accent" [disabled]="!importForm.valid" (click)="import(manifestFiles, imageFiles)">
+      Import
+    </button>
+  </div>
+</form>

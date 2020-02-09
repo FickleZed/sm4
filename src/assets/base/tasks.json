@@ -1,0 +1,88 @@
+{
+  "daily": {
+    "job": {
+      "name": "Job",
+      "tasks": {
+        "acolyte": {
+          "name": "Acolyte",
+          "description": "[Name] will assist the nuns at the temple."
+        }
+      }
+    },
+    "lesson": {
+      "name": "Lesson",
+      "tasks": {
+        "exercise": {
+          "name": "Exercise",
+          "description": "[Name] will exercise with a personal trainer."
+        },
+        "dance": {
+          "name": "Dance",
+          "description": "[Name] will improve her dance skills."
+        },
+        "etiquette": {
+          "name": "Etiquette",
+          "description": "This lesson will teach [Name] how to behave at the Royal Court."
+        }
+      }
+    }
+  },
+  "break": {
+    "rest": {
+      "name": "Rest",
+      "tasks": {
+        "lunch": {
+          "name": "Lunch",
+          "description": "[Name] will share lunch with you."
+        },
+        "expose": {
+          "name": "Expose [HimselfHerself]",
+          "description": "[Name] will expose [hisher] body in public.",
+          "obedience": 5
+        }
+      }
+    },
+    "shop": { 
+      "name": "Shop",
+      "tasks": {
+        "tailor": {
+          "name": "Tailor",
+          "description": "You will go to the tailor with [Name] to buy clothing for [himher]."
+        }
+      }
+    }
+  },
+  "foreplay": {
+    "intimacy": {
+      "name": "Intimacy",
+      "tasks": {
+        "touch": {
+          "name": "Touch [HimHer]",
+          "description": "Caress and touch [Name] to make [himher] more sensitive.",
+          "difficulty": 1
+        },
+        "strip": {
+          "name": "Strip Tease",
+          "description": "[Name] will perform a seductive striptease for you.",
+          "difficulty": 3,
+          "slaveFlags": { "exposed": false }
+        }
+      }
+    }
+  },
+  "sex": {
+    "intercourse": {
+      "name": "Intercourse",
+      "tasks": {
+        "fuck": {
+          "name": "Fuck [HimHer]",
+          "description": "Fuck [Name] in [himher] pussy.",
+          "difficulty": 2,
+          "slaveFlags": { "pussy": true },
+          "partnerFlags": { "cock": true },
+          "minPartners": 1
+        }
+      }
+    }
+  }
+}

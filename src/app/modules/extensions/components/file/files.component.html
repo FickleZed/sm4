@@ -1,0 +1,11 @@
+<input #fileInput type="file" [accept]="accept" multiple (change)="onChange($event.target.files)">
+<button type="button" mat-raised-button [disabled]="disabled" (click)="fileInput.click()" (blur)="onTouched()">
+  <ng-content></ng-content>
+</button>
+<ng-container *ngIf="files && files.length">
+  <h4 class="mat-subheading-1">Selected Files</h4>
+  <div *ngFor="let file of (files | slice:0:3)" class="mat-body">
+    {{ file.name }}
+  </div>
+  <div *ngIf="files.length > 3">...and {{ files.length - 3 }} other(s).</div>
+</ng-container>

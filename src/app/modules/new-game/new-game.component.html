@@ -1,0 +1,51 @@
+<h2 class="mat-title">New</h2>
+
+<form #newForm="ngForm" *ngLet="dialogSelections$ | async as dialogSelections">
+  <div>
+    <mat-form-field>
+      <input type="text" matInput name="givenName" [(ngModel)]="avatar.givenName" placeholder="Given Name" required />
+    </mat-form-field>
+    <mat-form-field>
+      <input type="text" matInput name="surname" [(ngModel)]="avatar.surname" placeholder="Surname" required />
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field>
+      <input type="text" matInput name="preferredName" [(ngModel)]="avatar.preferredName" placeholder="Preferred Name (mostly referred to as this)" required />
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field>
+      <input type="text" matInput name="domName" [(ngModel)]="avatar.domName" placeholder="Dom Name" required />
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-radio-group name="gender" [(ngModel)]="avatar.gender">
+      <mat-radio-button value="male">Male</mat-radio-button>
+      <mat-radio-button value="female">Female</mat-radio-button>
+      <mat-radio-button value="futanari">Futanari</mat-radio-button>
+    </mat-radio-group>
+  </div>
+  <div>
+    <button *ngIf="!dialogSelections.imageSet" mat-button (click)="openImageSetDialog()">Select Image Set...</button>
+    <mat-card *ngIf="dialogSelections.imageSet">
+      <mat-card-header>
+        <img mat-card-avatar [src]="dialogSelections.imageSet.profileImageUrl" />
+        <mat-card-title>{{ dialogSelections.imageSet.abstract.description }}</mat-card-title>
+        <mat-card-subtitle>other text</mat-card-subtitle>
+      </mat-card-header>
+      <img mat-card-image [src]="dialogSelections.imageSet.standardImageUrl" />
+      <mat-card-content>
+        <p>
+          Long Description
+        </p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button color="warn" (click)="openImageSetDialog()">Choose another Avatar</button>
+      </mat-card-actions>
+    </mat-card>
+    <input type="hidden" name="imageSet" [ngModel]="dialogSelections.imageSet" required />
+  </div>
+  <!--TODO: Consistent "Continue"/"Next" button style-->
+  <button mat-raised-button color="accent" [disabled]="!newForm.valid" (click)="create(avatar, dialogSelections)">Create</button>
+</form>
