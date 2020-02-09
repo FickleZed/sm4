@@ -38,6 +38,8 @@
           },
           "configurations": {
             "production": {
+              "baseHref": "/sm4/",
+              "deployUrl": "/sm4/",
               "fileReplacements": [
                 {
                   "replace": "src/environments/environment.ts",
