@@ -9,6 +9,9 @@ import { mergeMap, tap } from "rxjs/operators";
   templateUrl: "./avatar-extensions-import.component.html"
 })
 export class AvatarExtensionsImportComponent implements OnDestroy {
+  public manifestFiles: FileList;
+  public imageFiles: FileList;
+
   private readonly downloadSubject: Subject<string> = new Subject();
   private download$ = this.downloadSubject
     .pipe(
